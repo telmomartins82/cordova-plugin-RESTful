@@ -103,22 +103,22 @@ public class RESTful extends CordovaPlugin {
                     // "\nJSONObject.errorResponse: "+errorResponse.toString()+
                     // "";
 
-                    String errorMsg = "onFailure, GET " +
-                        "Status Code: " + Integer.toString(statusCode) + ", " +
-                        "Error message: " + throwable.getMessage() +
-                        " ";
+                    //String errorMsg = "onFailure, GET " +
+                    //    "Status Code: " + Integer.toString(statusCode) + ", " +
+                    //    "Error message: " + throwable.getMessage() +
+                    //    " ";
 
-                    callbackContext.error(errorMsg);
+                    callbackContext.error(errorResponse);
                 }
 
                 public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
 
-                    String errorMsg = "onFailure, GET " +
-                        "Status Code: " + Integer.toString(statusCode) + ", " +
-                        "Error message: " + throwable.getMessage() +
-                        " ";
+                    //String errorMsg = "onFailure, GET " +
+                    //    "Status Code: " + Integer.toString(statusCode) + ", " +
+                    //    "Error message: " + throwable.getMessage() +
+                    //    " ";
 
-                    callbackContext.error(errorMsg);
+                    callbackContext.error(responseString);
                 }
 
                 @Override
